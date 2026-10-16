@@ -77,7 +77,8 @@ export default function App() {
     setMessage("")
 
     try {
-      const response = await fetch("/api/demandes", {
+      const apiUrl = import.meta.env.VITE_API_URL || "/api"
+      const response = await fetch(`${apiUrl}/submit`, {
         method: "POST",
         headers: {
           Accept: "application/json",
@@ -105,7 +106,7 @@ export default function App() {
     } catch {
       setStatus("error")
       setMessage(
-        "Connexion au serveur impossible. Vérifiez que l’API Laravel est disponible, puis réessayez.",
+        "Connexion au serveur impossible. Vérifiez que le serveur est disponible, puis réessayez.",
       )
     }
   }

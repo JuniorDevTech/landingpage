@@ -16,6 +16,10 @@ public/api/config.local.php
 composer.phar
 composer-setup.php
 
+# Server
+server/node_modules
+server/database.sqlite
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
