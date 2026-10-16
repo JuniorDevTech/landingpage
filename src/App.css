@@ -1,0 +1,264 @@
+.page {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 16px 16px 96px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 0 20px;
+}
+
+.brand {
+  font-weight: 700;
+  color: var(--ink);
+  text-decoration: none;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.topbar-cta {
+  color: var(--gold-dark);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.banner {
+  display: grid;
+  gap: 28px;
+  align-items: center;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 28px;
+  padding: 28px 22px;
+  box-shadow: var(--shadow);
+}
+
+.eyebrow {
+  color: var(--gold-dark);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.72rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.banner h1 {
+  font-size: clamp(2rem, 7vw, 3.4rem);
+  line-height: 1.08;
+  margin-bottom: 14px;
+}
+
+.lede {
+  font-size: 1.05rem;
+  margin-bottom: 22px;
+  max-width: 38rem;
+}
+
+.banner-media img {
+  width: 100%;
+  border-radius: 20px;
+  object-fit: cover;
+  aspect-ratio: 16 / 10;
+}
+
+.btn-primary,
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+  border-radius: 999px;
+  border: 0;
+  font: inherit;
+  font-weight: 650;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: var(--forest);
+  color: #fff;
+}
+
+.btn-primary:disabled {
+  opacity: 0.7;
+  cursor: wait;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--forest);
+  border: 1px solid var(--forest);
+}
+
+.atouts,
+.essai {
+  margin-top: 56px;
+}
+
+.atouts h2,
+.essai h2 {
+  font-size: clamp(1.6rem, 4vw, 2.1rem);
+  margin-bottom: 22px;
+}
+
+.atouts-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.atout-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  padding: 22px;
+}
+
+.atout-index {
+  display: inline-block;
+  color: var(--gold);
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.atout-card h3 {
+  font-size: 1.15rem;
+  margin-bottom: 8px;
+}
+
+.essai-intro {
+  margin-bottom: 22px;
+}
+
+.essai-intro p:last-child {
+  max-width: 40rem;
+}
+
+.form,
+.confirm {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 24px;
+  padding: 22px;
+}
+
+.field-row,
+.field {
+  display: grid;
+  gap: 14px;
+}
+
+.field {
+  margin-bottom: 4px;
+}
+
+.field label {
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.field input,
+.field select {
+  width: 100%;
+  min-height: 48px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0 14px;
+  font: inherit;
+  color: var(--ink);
+  background: #fff;
+}
+
+.field input:focus,
+.field select:focus {
+  outline: 2px solid var(--gold);
+  outline-offset: 1px;
+}
+
+.field-error,
+.form-error {
+  color: var(--danger);
+  font-size: 0.9rem;
+}
+
+.form > .btn-primary {
+  margin-top: 18px;
+  width: 100%;
+}
+
+.honeypot {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.confirm {
+  display: grid;
+  gap: 12px;
+  border-color: #b7dfc6;
+  background: #f2faf5;
+}
+
+.confirm strong {
+  color: var(--ok);
+  font-size: 1.15rem;
+}
+
+.confirm .btn-secondary {
+  justify-self: start;
+}
+
+.footer {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.whatsapp {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 40;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: var(--whatsapp);
+  color: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 10px 24px rgba(37, 211, 102, 0.45);
+}
+
+@media (min-width: 800px) {
+  .page {
+    padding: 24px 24px 80px;
+  }
+
+  .banner {
+    grid-template-columns: 1.05fr 0.95fr;
+    padding: 36px;
+  }
+
+  .atouts-grid,
+  .field-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .atouts-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .form > .btn-primary {
+    width: auto;
+  }
+}
